@@ -9,7 +9,7 @@ public class UI {
 
     public String getPlayerName() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("\nPlease enter your name: ");
+        System.out.println("Please enter your name: ");
         String name = sc.nextLine();
         return name;
     }

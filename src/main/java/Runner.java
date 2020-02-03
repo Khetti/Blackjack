@@ -5,7 +5,7 @@ public class Runner {
     public static void main(String[] args) {
         UI ui = new UI();
         ui.welcome();
-        String player1 = ui.getPlayerName();
+        String player1 = "Dealer";
         String player2 = ui.getPlayerName();
 
         Deck newDeck = new Deck();
@@ -13,8 +13,8 @@ public class Runner {
         newDeck.populateDeck();
         newDeck.shuffleCards();
 
-        Card player1Card = newDeck.dealCard();
-        Card player2Card = newDeck.dealCard();
+        Card DealerCard1 = newDeck.dealCard();
+        Card PlayerCard1 = newDeck.dealCard();
 
         ArrayList<String> players;
         players = new ArrayList<>();
@@ -23,8 +23,8 @@ public class Runner {
 
         ArrayList<Card> playerCards;
         playerCards = new ArrayList<>();
-        playerCards.add(player1Card);
-        playerCards.add(player2Card);
+        playerCards.add(DealerCard1);
+        playerCards.add(PlayerCard1);
 
         String result = newDeck.higherCard(players, playerCards);
 
