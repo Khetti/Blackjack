@@ -37,13 +37,13 @@ public class GameTest {
         assertEquals(1, game.playerCount());
     }
 
-//    @Test
-//    public void canCheckResult() {
-//        Player player1 = game.addPlayer();
-//        game.addDealerCard();
-//        game.addDealerCard();
-//        game.addPlayerCard(player1);
-//        game.addPlayerCard(player1);
-//        assertEquals("Dealer Wins!", game.checkResult(player1));
-//    }
+    @Test
+    public void canCheckResult() {
+        Player player1 = game.addPlayer();
+        game.addDealerCard();
+        game.addDealerCard();
+        game.addPlayerCard(player1);
+        game.addPlayerCard(player1);
+        assertEquals("Dealer Wins!", game.checkResult(player1));
+    }
 }

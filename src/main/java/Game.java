@@ -44,9 +44,14 @@ public class Game {
         return this.players.size();
     }
 
-//    public String checkResult(Player player){
-//        ArrayList<Card> dealerCards = this.dealer.getCards();
-//        ArrayList<Card> playerCards = player.getCards();
-//    }
+    public String checkResult(Player player){
+        int dealerTotal = this.dealer.handTotal(this.dealer);
+        int playerTotal = player.handTotal(player);
+        if (playerTotal > dealerTotal){
+            return player.getName() + " Wins!";
+        } else {
+            return "Dealer Wins!";
+        }
+    }
 
 }
