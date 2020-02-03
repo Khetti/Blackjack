@@ -5,6 +5,8 @@ public class Deck {
 
     public Deck() {
         this.deck = new ArrayList<>();
+        populateDeck();
+        shuffleCards();
     }
 
     public int getSize() {

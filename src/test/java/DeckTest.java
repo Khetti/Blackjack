@@ -13,13 +13,7 @@ public class DeckTest {
     }
 
     @Test
-    public void deckStartsOffEmpty() {
-        assertEquals(0, deck.getSize());
-    }
-
-    @Test
-    public void canPopulateCard() {
-        deck.populateDeck();
+    public void canPopulateCards() {
         assertEquals(52, deck.getSize());
     }
 }
