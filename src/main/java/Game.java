@@ -29,13 +29,24 @@ public class Game {
         this.dealer.addCard(newCard);
     }
 
+    public void addPlayerCard(Player player) {
+        Card newCard = this.deck.dealCard();
+        player.addCard(newCard);
+    }
 
-    public void addPlayer() {
+    public Player addPlayer() {
         Player newPlayer = new Player("Jeff");
         this.players.add(newPlayer);
+        return newPlayer;
     }
 
     public int playerCount() {
         return this.players.size();
     }
+
+//    public String checkResult(Player player){
+//        ArrayList<Card> dealerCards = this.dealer.getCards();
+//        ArrayList<Card> playerCards = player.getCards();
+//    }
+
 }
