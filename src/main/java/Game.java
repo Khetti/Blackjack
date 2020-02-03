@@ -6,13 +6,36 @@ public class Game {
     private Deck deck;
     private ArrayList<Player> players;
 
-    public Game(Player dealer, Deck deck){
-        this.dealer = dealer;
-        this.deck = deck;
+    public Game(){
+        this.dealer = new Player("Dealer");
+        this.deck = new Deck();
         this.players = new ArrayList<>();
     }
 
+    public Deck getDeck() {
+        return this.deck;
+    }
+
+    public String getDealerName() {
+        return this.dealer.getName();
+    }
+
+    public Player getDealer() {
+        return this.dealer;
+    }
+
+    public void addDealerCard() {
+        Card newCard = this.deck.dealCard();
+        this.dealer.addCard(newCard);
+    }
 
 
+    public void addPlayer() {
+        Player newPlayer = new Player("Jeff");
+        this.players.add(newPlayer);
+    }
 
+    public int playerCount() {
+        return this.players.size();
+    }
 }
